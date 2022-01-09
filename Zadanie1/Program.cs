@@ -35,16 +35,35 @@ namespace Zadanie1
             for (int i = 0; i < n; i++) // i - numer wiersza // n przebiegów, n wierszy
             {
                 // pętla wypisuje n znaków 'X'
+                for (int j = 0; j < n; j++) // j - numer kolumny
+                {
+                    Console.Write("X");
+                }
                 // przejście do nowej linii
+                Console.WriteLine();
             }
 
+            Console.WriteLine();
             // kwadrat pusty w środku:
             for (int i = 0; i < n; i++) // i - numer wiersza // n przebiegów, n wierszy
             {
                 // pętla wypisuje n znaków 'X' + warunek kiedy ma być 'X' a kiedy ma być spacja
                 // przejście do nowej linii
+                for (int j = 0; j < n; j++) // j - numer kolumny
+                {
+                    if (j == 0 || j == n - 1 || i == 0 || i == n - 1)
+                    {
+                        Console.Write("X");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                }
+                // przejście do nowej linii
+                Console.WriteLine();
             }
-
+            Console.WriteLine();
             /*
             * X
             * XX
@@ -55,8 +74,16 @@ namespace Zadanie1
             {
                 // pętla wypisuje tyle znaków 'X' ile wynosi numer wiersza(liczony od 1)
                 // przejście do nowej linii
+                for (int j = 0; j < i+1; j++) // j - numer kolumny
+                {
+                    Console.Write("X");
+                }
+                // przejście do nowej linii
+                Console.WriteLine();
             }
 
+
+            Console.WriteLine();
             /*
            * X
            * XX
@@ -68,6 +95,19 @@ namespace Zadanie1
                 // pętla wypisuje tyle znaków 'X' ile wynosi numer wiersza(liczony od 1) + warunek 
                 // kiedy ma być 'X' a kiedy ma być spacja 
                 // przejście do nowej linii
+                for (int j = 0; j < i+1; j++) // j - numer kolumny
+                {
+                    if (j == 0 || j == i  || i == 0 || i == 1 || i==n-1)
+                    {
+                        Console.Write("X");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                }
+                // przejście do nowej linii
+                Console.WriteLine();
             }
 
             /*
@@ -79,13 +119,24 @@ namespace Zadanie1
             /*
              * WZÓR s + i = n, s = n - i
              */
-
+            Console.WriteLine();
             for (int i = 1; i <= n; i++) // i - numer wiersza // n przebiegów, n wierszy
             {
                 // pętla wypisuje spacje
+                for (int j = 0; j < n-i; j++)
+                {
+                    Console.Write(" ");
+                }
                 // pętla wypisuje 'X'
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write("X");
+                }
                 // przejście do nowej linii
+                Console.WriteLine();
             }
+
+            Console.ReadKey();
 
         }
     }
