@@ -136,6 +136,26 @@ namespace Zadanie1
                 Console.WriteLine();
             }
 
+            /*
+            * WZÓR s + x = n, x = n - s
+            */
+            Console.WriteLine();
+            for (int s = 4; s >= 0; s--) // s - numer wiersza
+            {
+                // pętla wypisuje spacje
+                for (int j = 0; j < s; j++)
+                {
+                    Console.Write(" ");
+                }
+                // pętla wypisuje 'X'
+                for (int j = 0; j < n-s; j++)
+                {
+                    Console.Write("X");
+                }
+                // przejście do nowej linii
+                Console.WriteLine();
+            }
+
             Console.ReadKey();
 
         }
